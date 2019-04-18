@@ -1,0 +1,172 @@
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing:border-box}
+body {font-family: Verdana,sans-serif;}
+.mySlides {display:none}
+.img{
+position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: relative;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 10000px;
+  position: relative;
+  margin: auto;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 13px;
+  width: 13px;
+  margin: 0 2px;
+  background-color: #bbb;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 8s;
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+
+}
+</style>
+</head>
+<body>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(1.jpg);width:100%;height:510px">
+</div>
+
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(2.jpg);width:100%;height:510px">
+</div>
+
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(3.jpg);width:100%;height:510px">
+</div>
+
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(4.jpg);width:100%;height:510px">
+</div>
+
+</div>
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(5.jpg);width:100%;height:510px">
+</div>
+
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(6.jpg);width:100%;height:510px">
+</div>
+
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(7.jpg);width:100%;height:510px">
+</div>
+
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(8.jpg);width:100%;height:510px">
+</div>
+
+</div><div class="mySlides fade">
+  <img class="img"style="background-image:url(9.jpg);width:100%;height:510px">
+</div>
+
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(10.jpg);width:100%;height:510px">
+</div>
+
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(11.jpg);width:100%;height:510px">
+</div>
+
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(12.jpg);width:100%;height:510px">
+</div>
+
+</div><div class="mySlides fade">
+  <img class="img"style="background-image:url(13.jpg);width:100%;height:510px">
+</div>
+
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(14.png);width:100%;height:510px">
+</div>
+
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(15.jpg);width:100%;height:510px">
+</div>
+
+<div class="mySlides fade">
+  <img class="img"style="background-image:url(16.jpg);width:100%;height:510px">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+<span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span>
+  <span class="dot"></span>  
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 10seconds
+}
+</script>
+
+</body>
